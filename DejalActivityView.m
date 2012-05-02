@@ -8,7 +8,7 @@
 //  Redistribution and use in source and binary forms, with or without modification,
 //  are permitted provided that the following conditions are met:
 //
-//  - Redistributions of source code must strong the above copyright notice,
+//  - Redistributions of source code must retain the above copyright notice,
 //    this list of conditions and the following disclaimer.
 //
 //  - Redistributions in binary form must reproduce the above copyright notice,
@@ -75,7 +75,7 @@ static DejalActivityView *dejalActivityView = nil;
  Creates and adds an activity view centered within the specified view, using the label "Loading...".  Returns the activity view, already added as a subview of the specified view.
  
  Written by DJS 2009-07.
- Changed by DJS 2010-06 to add "new" prefix to the method name to make it clearer that this returns a stronged object.
+ Changed by DJS 2010-06 to add "new" prefix to the method name to make it clearer that this returns a retained object.
  Changed by DJS 2011-08 to remove the "new" prefix again.
 */
 
@@ -90,7 +90,7 @@ static DejalActivityView *dejalActivityView = nil;
  Creates and adds an activity view centered within the specified view, using the specified label.  Returns the activity view, already added as a subview of the specified view.
  
  Written by DJS 2009-07.
- Changed by DJS 2010-06 to add "new" prefix to the method name to make it clearer that this returns a stronged object.
+ Changed by DJS 2010-06 to add "new" prefix to the method name to make it clearer that this returns a retained object.
  Changed by DJS 2011-08 to remove the "new" prefix again.
 */
 
@@ -105,7 +105,7 @@ static DejalActivityView *dejalActivityView = nil;
  Creates and adds an activity view centered within the specified view, using the specified label and a fixed label width.  The fixed width is useful if you want to change the label text while the view is visible.  Returns the activity view, already added as a subview of the specified view.
  
  Written by DJS 2009-07.
- Changed by DJS 2010-06 to add "new" prefix to the method name to make it clearer that this returns a stronged object.
+ Changed by DJS 2010-06 to add "new" prefix to the method name to make it clearer that this returns a retained object.
  Changed by DJS 2011-08 to remove the "new" prefix again, and move the singleton stuff to here.
 */
 
@@ -688,7 +688,7 @@ static DejalActivityView *dejalActivityView = nil;
  Creates and adds a keyboard-style activity view, using the label "Loading...".  Returns the activity view, already covering the keyboard, or nil if the keyboard isn't currently displayed.
  
  Written by DJS 2009-07.
- Changed by DJS 2010-06 to add "new" prefix to the method name to make it clearer that this returns a stronged object.
+ Changed by DJS 2010-06 to add "new" prefix to the method name to make it clearer that this returns a retained object.
  Changed by DJS 2011-08 to remove the "new" prefix again.
 */
 
@@ -703,7 +703,7 @@ static DejalActivityView *dejalActivityView = nil;
  Creates and adds a keyboard-style activity view, using the specified label.  Returns the activity view, already covering the keyboard, or nil if the keyboard isn't currently displayed.
  
  Written by DJS 2009-07.
- Changed by DJS 2010-06 to add "new" prefix to the method name to make it clearer that this returns a stronged object.
+ Changed by DJS 2010-06 to add "new" prefix to the method name to make it clearer that this returns a retained object.
  Changed by DJS 2011-08 to remove the "new" prefix again.
 */
 
@@ -819,7 +819,7 @@ static DejalActivityView *dejalActivityView = nil;
 // 
 //  Permission is given to use this source code file, free of charge, in any
 //  project, commercial or otherwise, entirely at your risk, with the condition
-//  that any redistribution (in part or whole) of source code must strong
+//  that any redistribution (in part or whole) of source code must retain
 //  this copyright and permission notice. Attribution in compiled projects is
 //  appreciated but not required.
 
