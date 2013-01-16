@@ -271,7 +271,7 @@ static DejalActivityView *dejalActivityView = nil;
  
  Written by DJS 2009-07.
  Changed by DJS 2011-11 to simplify and make it easier to override.
- Changed by DJS 2013-01 to use NSTextAlignmentLeft instead of the deprecated UITextAlignmentLeft.
+ Changed by chrisledet 2013-01 to use NSTextAlignmentLeft instead of the deprecated UITextAlignmentLeft.
 */
 
 - (UILabel *)makeActivityLabelWithText:(NSString *)labelText;
@@ -528,7 +528,7 @@ static DejalActivityView *dejalActivityView = nil;
  Written by DJS 2009-07.
  Changed by Suleman Sidat 2011-07 to support a multi-line label.
  Changed by DJS 2011-11 to simplify and make it easier to override.
- Changed by DJS 2013-01 to use NSTextAlignmentCenter and NSLineBreakByWordWrapping instead of the deprecated UITextAlignmentCenter and UILineBreakModeWordWrap.
+ Changed by chrisledet 2013-01 to use NSTextAlignmentCenter and NSLineBreakByWordWrapping instead of the deprecated UITextAlignmentCenter and UILineBreakModeWordWrap.
 */
 
 - (UILabel *)makeActivityLabelWithText:(NSString *)labelText;
