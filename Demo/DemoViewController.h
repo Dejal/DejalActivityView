@@ -3,7 +3,7 @@
 //  DejalActivityView Demo
 //
 //  Created by David Sinclair on 2009-07-30.
-//  Copyright 2009-2012 Dejal Systems, LLC. All rights reserved.
+//  Copyright 2009-2013 Dejal Systems, LLC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

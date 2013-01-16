@@ -3,7 +3,7 @@
 //  Dejal Open Source
 //
 //  Created by David Sinclair on 2009-07-26.
-//  Copyright (c) 2009-2012 Dejal Systems, LLC. All rights reserved.
+//  Copyright (c) 2009-2013 Dejal Systems, LLC. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without modification,
 //  are permitted provided that the following conditions are met:
@@ -271,6 +271,7 @@ static DejalActivityView *dejalActivityView = nil;
  
  Written by DJS 2009-07.
  Changed by DJS 2011-11 to simplify and make it easier to override.
+ Changed by DJS 2013-01 to use NSTextAlignmentLeft instead of the deprecated UITextAlignmentLeft.
 */
 
 - (UILabel *)makeActivityLabelWithText:(NSString *)labelText;
@@ -278,7 +279,7 @@ static DejalActivityView *dejalActivityView = nil;
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
     
     label.font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
-    label.textAlignment = UITextAlignmentLeft;
+    label.textAlignment = NSTextAlignmentLeft;
     label.textColor = [UIColor blackColor];
     label.backgroundColor = [UIColor clearColor];
     label.shadowColor = [UIColor whiteColor];
@@ -527,6 +528,7 @@ static DejalActivityView *dejalActivityView = nil;
  Written by DJS 2009-07.
  Changed by Suleman Sidat 2011-07 to support a multi-line label.
  Changed by DJS 2011-11 to simplify and make it easier to override.
+ Changed by DJS 2013-01 to use NSTextAlignmentCenter and NSLineBreakByWordWrapping instead of the deprecated UITextAlignmentCenter and UILineBreakModeWordWrap.
 */
 
 - (UILabel *)makeActivityLabelWithText:(NSString *)labelText;
@@ -534,11 +536,11 @@ static DejalActivityView *dejalActivityView = nil;
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
     
     label.font = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
-    label.textAlignment = UITextAlignmentCenter;
+    label.textAlignment = NSTextAlignmentCenter;
     label.textColor = [UIColor whiteColor];
     label.backgroundColor = [UIColor clearColor];
     label.numberOfLines = 0;
-    label.lineBreakMode = UILineBreakModeWordWrap; 
+    label.lineBreakMode = NSLineBreakByWordWrapping;
     label.text = labelText;
     
     return label;

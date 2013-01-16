@@ -3,7 +3,7 @@
 //  Dejal Open Source
 //
 //  Created by David Sinclair on 2009-07-26.
-//  Copyright (c) 2009-2012 Dejal Systems, LLC. All rights reserved.
+//  Copyright (c) 2009-2013 Dejal Systems, LLC. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without modification,
 //  are permitted provided that the following conditions are met:
