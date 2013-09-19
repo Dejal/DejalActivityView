@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>95A62F70-D7E6-480D-86B0-A9CAFE80FCFC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DejalActivityView Demo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7F15B6C9-AE7B-47FA-9980-26833F161D4D</key>
+		<string>https://github.com/graetzer/DejalActivityView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Demo/DejalActivityView Demo.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7F15B6C9-AE7B-47FA-9980-26833F161D4D</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/graetzer/DejalActivityView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7F15B6C9-AE7B-47FA-9980-26833F161D4D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7F15B6C9-AE7B-47FA-9980-26833F161D4D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DejalActivityView</string>
+		</dict>
+	</array>
+</dict>
+</plist>

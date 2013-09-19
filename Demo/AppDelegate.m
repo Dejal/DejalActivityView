@@ -16,9 +16,8 @@
 @synthesize window, navigationController, defaultImageView;
 
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application;
-{    
-	[window addSubview:[navigationController view]];
+- (void)applicationDidFinishLaunching:(UIApplication *)application; {
+    window.rootViewController = navigationController;
     [window makeKeyAndVisible];
     
     // No need for a property for the activity view:
