@@ -29,7 +29,7 @@
 //  Credit: inspired by Matt Gallagher's LoadingView blog post:
 //  http://cocoawithlove.com/2009/04/showing-message-over-iphone-keyboard.html
 //
- 
+
 
 #import "DejalActivityView.h"
 #import <QuartzCore/QuartzCore.h>
@@ -305,12 +305,17 @@ static DejalActivityView *dejalActivityView = nil;
     if (!CGAffineTransformIsIdentity(self.borderView.transform))
         return;
     
-#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
-    CGSize textSize = [self.activityLabel.text sizeWithFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
-#else
-    CGSize textSize = [self.activityLabel.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:[UIFont systemFontSize]]}];
-#endif
-    
+    CGSize textSize;
+    if ([self.activityLabel.text respondsToSelector:@selector(sizeWithAttributes:)]) {
+        textSize = [self.activityLabel.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:[UIFont systemFontSize]]}];
+    }
+    else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        textSize = [self.activityLabel.text sizeWithFont:[UIFont systemFontOfSize:[UIFont systemFontSize]]];
+#pragma clang diagnostic pop
+    }
+
     // Use the fixed width if one is specified:
     if (self.labelWidth > 10)
         textSize.width = self.labelWidth;
@@ -569,19 +574,25 @@ static DejalActivityView *dejalActivityView = nil;
     
     CGSize maxSize = CGSizeMake(260, 400);
     
-#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
-    CGSize textSize = [self.activityLabel.text sizeWithFont:[UIFont boldSystemFontOfSize:[UIFont systemFontSize]]
-                                          constrainedToSize:maxSize
-                                              lineBreakMode:self.activityLabel.lineBreakMode];
-#else
-    NSMutableParagraphStyle *para = [NSMutableParagraphStyle new];
-    para.lineBreakMode = self.activityLabel.lineBreakMode;
-    CGSize textSize = [self.activityLabel.text boundingRectWithSize:maxSize
-                                                            options:NSStringDrawingUsesLineFragmentOrigin
-                                                         attributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:[UIFont systemFontSize]],
-                                                                      NSParagraphStyleAttributeName:para}
-                                                            context:nil].size;
-#endif
+    CGSize textSize;
+    if ([self.activityLabel.text respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) {
+        NSMutableParagraphStyle *para = [NSMutableParagraphStyle new];
+        para.lineBreakMode = self.activityLabel.lineBreakMode;
+        textSize = [self.activityLabel.text boundingRectWithSize:maxSize
+                                                         options:NSStringDrawingUsesLineFragmentOrigin
+                                                      attributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:[UIFont systemFontSize]],
+                                                                   NSParagraphStyleAttributeName:para}
+                                                         context:nil].size;
+
+    }
+    else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        textSize = [self.activityLabel.text sizeWithFont:[UIFont boldSystemFontOfSize:[UIFont systemFontSize]]
+                                       constrainedToSize:maxSize
+                                           lineBreakMode:self.activityLabel.lineBreakMode];
+#pragma clang diagnostic pop
+    }
     
     // Use the fixed width if one is specified:
     if (self.labelWidth > 10)
