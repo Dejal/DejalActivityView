@@ -680,7 +680,10 @@ static DejalActivityView *dejalActivityView = nil;
 
 - (void)removeAnimationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context;
 {
-    [[self class] removeView];
+    if([finished boolValue])
+    {
+        [[self class] removeView];
+    }
 }
 
 /*
